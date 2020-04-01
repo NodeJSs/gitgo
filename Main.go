@@ -29,5 +29,15 @@ func main() {
 
 	users := strings.Split(user, ",")
 	fmt.Printf("Searching user(s): %s\n", users)
-	GetUsersData(users)
+	for index, value := range users {
+		result := GetUsersData(value)
+		fmt.Println("#", index+1, "Github user")
+		fmt.Println("Name: ", result.Name)
+		fmt.Println("Location: ", result.Location)
+		fmt.Println("Bio: ", result.Bio)
+		fmt.Println("Number of Public Repos: ", result.PublicRepos)
+		fmt.Println("Followers: ", result.Followers)
+		fmt.Println("Following: ", result.Following)
+	}
+
 }

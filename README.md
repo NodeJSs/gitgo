@@ -1,0 +1,2 @@
+# gitgo
+First Go CLI
